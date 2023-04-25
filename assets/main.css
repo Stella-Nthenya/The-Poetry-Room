@@ -1,0 +1,34 @@
+.main_container {
+    background-color: rgb(241, 233, 228);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+.top-nav-bar {
+    background-color: rgb(67, 58, 167);
+    color: white;
+    margin-top: 10px;
+    height: 80px;
+    padding: 0px 14px; 
+}
+
+.top-nav-bar a {
+    color: white;
+    text-align: center;
+    padding: 0px 100px;
+    line-height: 5;
+}
+
+.top-nav-bar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+.filter_poems #filter_poems_form {
+    background-color: white;
+}
+
+/* img {
+    height: 400px;
+    position: ;
+} */

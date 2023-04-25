@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/main.css">
     <title>Poetry Room</title>
 </head>
-<body class="main container">
+
+<body class="main_container">
     <header>
-        <nav class="top nav-bar">
-            <img src="assets/poetry_logo.jpg" alt="personal poetry app logo">
+        <nav class="top-nav-bar">
+            <div class="nav-links">
+                <a href="javascript:window.location.href=window.location.href">Home</a>
+                <a href="#bottom">Contact us</a>
+                <a href="#bottom">Address</a>
+                <a href="#bottom">What is poetry room</a>
+            </div>
+            
         </nav>
-        <button>Menu</button>
+        <!-- <button>Menu</button> -->
     </header>
     <div>
         <h3>Filter Poems</h3>
-        <form class="" id="filter_poems_form">
+        <form class="filter_poems" id="filter_poems_form">
             <div class="poems-author-filter">
                 <label for="select-author">Select By Author</label>
                 <select name="authors" id="authors">
@@ -31,5 +40,23 @@
             </div>
         </form>
     </div>
+    <div>
+        <h3>List of Poems</h3>
+        <div id="poems_list"></div>
+    </div>
+    <div class="liked_list">
+        <h3>My Favourite Poems</h3>
+        <div id="liked_poems"></div>
+    </div>
+    <div class="about-us" id="about-us">
+        <ul>
+            <li>Contact us on +25471541****</li>
+            <li>Address: Moringa School, Nairobi, Kenya</li>
+        </ul>
+        <h3>What is poetry room</h3>
+        <p>Poetry room is a web application that allows users to access poems by different authors</p>
+        <img src="assets/poetry_logo.jpg" alt="personal poetry app logo">
+    </div>
 </body>
+
 </html>
