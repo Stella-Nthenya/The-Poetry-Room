@@ -13,25 +13,25 @@
     <header>
         <nav class="top-nav-bar">
             <div class="nav-links">
-                <a href="javascript:window.location.href=window.location.href">Home</a>
-                <a href="#bottom">Contact us</a>
-                <a href="#bottom">Address</a>
-                <a href="#bottom">What is poetry room</a>
+                <a href="#about-us">Home</a>
+                <a href="">Contact us</a>
+                <a href="">Address</a>
+                <a href="">What is poetry room</a>
             </div>
-            
+
         </nav>
-        <!-- <button>Menu</button> -->
     </header>
     <div>
-        <h3>Filter Poems</h3>
+        <h3 id="h3Filter-Poems">Filter Poems</h3>
         <form class="filter_poems" id="filter_poems_form">
-            <div class="poems-author-filter">
-                <label for="select-author">Select By Author</label>
-                <select name="authors" id="authors">
-                    <option value="">Please select a poet</option>
-                </select>
-            </div>
             <fieldset>
+                <div class="poems-author-filter">
+                    <label for="select-author">Select Author</label>
+                    <select name="authors" id="authors">
+                        <option value="">Please select a poet</option>
+                    </select>
+                </div>
+
                 <label for="">Type the Title of the Poem</label>
                 <input id="poem_title" type="text" placeholder="Poem Title">
             </fieldset>
@@ -40,15 +40,15 @@
             </div>
         </form>
     </div>
-    <div>
+    <div id="poems_list">
         <h3>List of Poems</h3>
-        <div id="poems_list"></div>
     </div>
     <div class="liked_list">
         <h3>My Favourite Poems</h3>
         <div id="liked_poems"></div>
     </div>
     <div class="about-us" id="about-us">
+        <h4>About US</h4>
         <ul>
             <li>Contact us on +25471541****</li>
             <li>Address: Moringa School, Nairobi, Kenya</li>

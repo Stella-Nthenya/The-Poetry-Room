@@ -10,6 +10,7 @@
     margin-top: 10px;
     height: 80px;
     padding: 0px 14px; 
+    border-radius: 10px;
 }
 
 .top-nav-bar a {
@@ -24,11 +25,57 @@
     color: black;
   }
 
+#h3Filter-Poems {
+    text-align: center;
+    color: rgb(53, 24, 147);
+    font-size: larger;
+}
+
 .filter_poems #filter_poems_form {
     background-color: white;
 }
 
-/* img {
+#filter_poems_form label{
+    color: #8f7ee4;
+    font-weight: bold;
+    display: block;
+    width: 250px;
+    float: left;
+}
+
+#filter_poems_form select {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+#filter_poems_form input {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+
+#poem_name_btn {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 5px;
+    background-color: rgb(67, 58, 167);
+    position: relative;
+    border: #ddd;
+    border-radius: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+
+
+img {
+    display: block;
     height: 400px;
-    position: ;
-} */
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
