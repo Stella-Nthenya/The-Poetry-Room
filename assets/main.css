@@ -58,16 +58,19 @@
 }
 
 
-#poem_name_btn {
+#poem_filter_btn {
     width: 50%;
-    padding: 12px 20px;
-    margin: 5px;
+    padding: 10px;
+    display: block;
+    margin: 0 25%;
     background-color: rgb(67, 58, 167);
     position: relative;
     border: #ddd;
     border-radius: 10px;
     font-size: 20px;
     color: white;
+    width: 30%;
+    margin-top: 5px;
 }
 
 
