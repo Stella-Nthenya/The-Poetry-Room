@@ -2,6 +2,7 @@
     background-color: rgb(241, 233, 228);
     background-size: cover;
     font-family: sans-serif;
+    
 }
 
 .top-nav-bar {
@@ -9,7 +10,7 @@
     color: white;
     margin-top: 10px;
     height: 80px;
-    padding: 0px 14px; 
+    padding: 0px 14px;
     border-radius: 10px;
 }
 
@@ -23,7 +24,7 @@
 .top-nav-bar a:hover {
     background-color: #ddd;
     color: black;
-  }
+}
 
 #h3Filter-Poems {
     text-align: center;
@@ -35,7 +36,7 @@
     background-color: white;
 }
 
-#filter_poems_form label{
+#filter_poems_form label {
     color: #8f7ee4;
     font-weight: bold;
     display: block;
@@ -73,7 +74,22 @@
     margin-top: 5px;
 }
 
+#about-us {
+    border: 3px solid rgb(158, 149, 232);
+    padding: 5px;
+    margin: auto;
+    overflow:hidden;
+}
 
+#about-us div {
+    float: left;
+    padding: 5px;
+    width: 30%;
+}
+
+#about-us h4 {
+    text-align: center;
+}
 
 img {
     display: block;
