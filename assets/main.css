@@ -26,10 +26,11 @@
     color: black;
 }
 
-#h3Filter-Poems {
+h3 {
     text-align: center;
     color: rgb(53, 24, 147);
     font-size: larger;
+    font-weight: 500;
 }
 
 .filter_poems #filter_poems_form {
@@ -73,13 +74,21 @@
     width: 30%;
     margin-top: 5px;
 }
+#allpoems div{
+    width: 50%;
+    height: 500px;
+    background-color: rgb(232, 221, 237);
+    margin: 20px;
+    position: relative;
+    left: 10%;
+}
 
 #poems_list {
-    height: 500px;
-    width: 50%;
     overflow-y: auto;
-    background-color: rgb(232, 221, 237);
-    margin-top: 10px;
+}
+
+.liked_list {
+    overflow-y: auto;
 }
 
 #about-us {
@@ -91,6 +100,7 @@
 }
 
 #about-us div {
+    margin-top: 20px;
     float: left;
     padding: 5px;
     width: 30%;
