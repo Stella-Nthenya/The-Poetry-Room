@@ -74,11 +74,20 @@
     margin-top: 5px;
 }
 
+#poems_list {
+    height: 500px;
+    width: 50%;
+    overflow-y: auto;
+    background-color: rgb(232, 221, 237);
+    margin-top: 10px;
+}
+
 #about-us {
-    border: 3px solid rgb(158, 149, 232);
     padding: 5px;
     margin: auto;
     overflow:hidden;
+    border-left: #8f7ee4;
+    border-right: #8f7ee4;
 }
 
 #about-us div {
@@ -89,7 +98,16 @@
 
 #about-us h4 {
     text-align: center;
+    box-shadow: 5px 10px 18px#8f7ee4 inset;
 }
+#about-us li {
+    margin: 30px 0;
+    list-style-type: none;
+}
+
+div:target {
+    box-shadow: 5px 10px 18px#8f7ee4 inset;
+  }
 
 img {
     display: block;
@@ -97,4 +115,15 @@ img {
     position: relative;
     margin-left: auto;
     margin-right: auto;
+}
+
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(34, 7, 33);
+    color: white;
+    text-align: center;
+    height: 30px;
 }
