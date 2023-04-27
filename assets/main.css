@@ -76,18 +76,13 @@ h3 {
     margin-top: 5px;
 }
 
-#allpoems div {
-    width: 50%;
-    height: 500px;
-    background-color: rgb(232, 221, 237);
-    margin: 20px;
-    position: relative;
-    left: 10%;
+#allpoems {
+    background-color: #eee;
+    max-height: 500px;
+    overflow-y: scroll;
 }
 
-#poems_list {
-    overflow-y: auto;
-}
+
 
 .liked_list {
     overflow-y: auto;
