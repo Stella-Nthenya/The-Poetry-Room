@@ -1,6 +1,6 @@
 # Poetry Room
 
-This is a project that retrieves poems from different poets. The project has been developed with the aim of providing a simple and user-friendly interface for users to read poems online.
+This is an application that retrieves poems from different poets. It has been developed with the aim of providing a simple and user-friendly interface for users to read poems online.
 
 # Technologies Used
 - HTML5
