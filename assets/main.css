@@ -2,10 +2,10 @@
     background-color: rgb(241, 233, 228);
     background-size: cover;
     font-family: sans-serif;
-    
+
 }
 
-.top-nav-bar {
+nav {
     background-color: rgb(67, 58, 167);
     color: white;
     margin-top: 10px;
@@ -13,6 +13,7 @@
     padding: 0px 14px;
     border-radius: 10px;
 }
+
 
 .top-nav-bar a {
     color: white;
@@ -74,7 +75,8 @@ h3 {
     width: 30%;
     margin-top: 5px;
 }
-#allpoems div{
+
+#allpoems div {
     width: 50%;
     height: 500px;
     background-color: rgb(232, 221, 237);
@@ -94,7 +96,7 @@ h3 {
 #about-us {
     padding: 5px;
     margin: auto;
-    overflow:hidden;
+    overflow: hidden;
     border-left: #8f7ee4;
     border-right: #8f7ee4;
 }
@@ -110,6 +112,7 @@ h3 {
     text-align: center;
     box-shadow: 5px 10px 18px#8f7ee4 inset;
 }
+
 #about-us li {
     margin: 30px 0;
     list-style-type: none;
@@ -117,7 +120,7 @@ h3 {
 
 div:target {
     box-shadow: 5px 10px 18px#8f7ee4 inset;
-  }
+}
 
 img {
     display: block;

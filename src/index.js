@@ -8,3 +8,8 @@ const nav_links = document.getElementsByClassName("nav-links");
 const poems_api = "https://poetrydb.org/";
 
 // reading http request
+async function get_resource(path = "", params = {}) {
+  const url = new URL(poems_api + path);
+  const response = await fetch(url);
+  return response.json();
+}
