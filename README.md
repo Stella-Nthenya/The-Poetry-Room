@@ -2,6 +2,11 @@
 
 This is a project that retrieves poems from different poets. The project has been developed with the aim of providing a simple and user-friendly interface for users to read poems online.
 
+# Technologies Used
+- HTML5
+- CSS
+- JavaScript
+
 ## Features
 
 - Retrieve poems from different poets
@@ -14,7 +19,7 @@ This is a project that retrieves poems from different poets. The project has bee
 ### Prerequisites
 
 A web browser (Google Chrome, Mozilla Firefox, Safari, etc.)
-Installation
+### Installation
 Clone the repository to your local machine
 
 Copy code
@@ -22,8 +27,24 @@ Copy code
 git clone git@github.com:Stella-Nthenya/the-poetry-room.git
 ```
 
+### Usage
 - Open the index.html file in your web browser
-  ##Usage
 - Select a poet from the list of available poets
 - Select a poem from the list of available poems by the poet
 - Read the poem
+-If you like the poem, press the like button
+
+### Contributing
+Contributions are welcome. To contribute to the project, follow the steps below:
+
+- Fork the project
+- Create a new branch
+- Make your changes and commit them
+- Push to the branch
+- Create a pull request
+
+For major changes, please open an issue first to discuss what you would like to change.
+
+### Acknowledgments
+The poems used in this project are sourced from various online repositories and are in the public domain.
+
