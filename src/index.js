@@ -4,9 +4,9 @@ const select_author = document.getElementById("authors");
 const filter_btn = document.getElementById("poem_filter_btn");
 const poems_div = document.getElementById("poems_content");
 const nav_links = document.getElementsByClassName("nav-links");
+const by_poet = document.getElementById("by_poet")
 // this is from https://github.com/public-apis/public-apis#books > https://github.com/thundercomb/poetrydb#
 const poems_api = "https://poetrydb.org/";
-let by_poet;
 
 // reading http request
 async function get_resource(path = "", params = {}) {
@@ -51,6 +51,39 @@ filter_poems_form.addEventListener("submit", function (event) {
     get_resource((path = author_path)).then(function (data) {
       data.forEach(function ({ title, author, lines }) {
         // display retrieved poem content
+        by_poet.innerHTML = `by ${author}`
+        // create poem div
+        const poemDiv = document.createElement("div");
+        // poemDiv.classList.add("");
+
+        // create poem header
+        const poemHeaderDiv = document.createElement("div");
+        poemHeaderDiv.classList.add("px-6", "py-4");
+
+        const poemTitle = document.createElement("h3");
+        poemTitle.classList.add("poem-title");
+        poemTitle.innerHTML = title;
+
+        const poemAuthor = document.createElement("span");
+        poemAuthor.classList.add("poem-author");
+        poemAuthor.innerHTML = author;
+
+        const poemContent = document.createElement("p");
+        poemContent.classList.add("poem-lines");
+        poemContent.innerHTML = lines.join("<br>").slice(0, 140) + "...";
+
+        poemHeaderDiv.appendChild(poemTitle);
+        poemHeaderDiv.appendChild(poemAuthor);
+        poemHeaderDiv.appendChild(poemContent);
+
+        poemDiv.appendChild(poemHeaderDiv);
+
+        // create poem footer
+        const poemFooterDiv = document.createElement("div");
+        poemFooterDiv.classList.add("poem-footer");
+        // poemFooterDiv.innerHTML = poemDiv.appendChild(poemFooterDiv);
+
+        poems_div.appendChild(poemDiv);
       });
     });
   } else {

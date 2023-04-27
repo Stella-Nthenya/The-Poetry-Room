@@ -77,12 +77,42 @@ h3 {
 }
 
 #allpoems {
+    display: flex;
+    flex-grow: 1;
+    padding: 1.25rem;
     background-color: #eee;
     max-height: 500px;
     overflow-y: scroll;
 }
 
+#allpoems > div {
+    width: 50%;
+}
 
+#by_poet {
+    font-weight: 200;
+}
+
+#poems_content {
+    display: block;
+    /* width: 100%; */
+    /* margin: 0 auto; */
+    padding: 1.5rem;
+    background-color: #f2f2f2;
+}
+
+.poem-title {
+    font-weight: 700;
+    text-align: left;
+    margin: 1rem 0 .5rem;
+}
+
+.poem-author {
+    font-weight: 200;
+    color: #b90000;
+    padding: 0;
+    margin: 0;
+}
 
 .liked_list {
     overflow-y: auto;
