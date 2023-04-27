@@ -4,9 +4,12 @@ const select_author = document.getElementById("authors");
 const filter_btn = document.getElementById("poem_filter_btn");
 const poems_div = document.getElementById("poems_content");
 const nav_links = document.getElementsByClassName("nav-links");
-const by_poet = document.getElementById("by_poet")
+const by_poet = document.getElementById("by_poet");
+const liked_poems_div = document.getElementById("liked_poems_div");
 // this is from https://github.com/public-apis/public-apis#books > https://github.com/thundercomb/poetrydb#
 const poems_api = "https://poetrydb.org/";
+
+const liked_poems = [];
 
 // reading http request
 async function get_resource(path = "", params = {}) {
@@ -51,7 +54,7 @@ filter_poems_form.addEventListener("submit", function (event) {
     get_resource((path = author_path)).then(function (data) {
       data.forEach(function ({ title, author, lines }) {
         // display retrieved poem content
-        by_poet.innerHTML = `by ${author}`
+        by_poet.innerHTML = `by ${author}`;
         // create poem div
         const poemDiv = document.createElement("div");
         // poemDiv.classList.add("");
@@ -81,12 +84,47 @@ filter_poems_form.addEventListener("submit", function (event) {
         // create poem footer
         const poemFooterDiv = document.createElement("div");
         poemFooterDiv.classList.add("poem-footer");
-        // poemFooterDiv.innerHTML = poemDiv.appendChild(poemFooterDiv);
+
+        // Create the div element
+        const divElement = document.createElement("div");
+
+        // Set the id attribute of the div element
+        divElement.setAttribute("id", "like-dislike");
+
+        // Create the first p element and set its text content to the thumbs up symbol
+        const like_btn = document.createElement("p");
+        like_btn.textContent = "👍";
+
+        // Create the second p element and set its text content to the thumbs down symbol
+        const secondPElem = document.createElement("p");
+        secondPElem.textContent = "👎";
+
+        // Append the p elements to the div element
+        divElement.appendChild(like_btn);
+        divElement.appendChild(secondPElem);
+
+        poemFooterDiv.appendChild(divElement);
+
+        poemDiv.appendChild(poemFooterDiv);
 
         poems_div.appendChild(poemDiv);
+
+        like_btn.addEventListener("click", function() {
+          liked_poems.push(`${title} by ${author}`)
+          
+          if (liked_poems){
+            liked_poems.forEach(function(element) {
+              const p = document.createElement("p");
+              p.innerHTML = element;
+              liked_poems_div.append(p)
+            })
+          }
+        })
       });
     });
   } else {
     alert("No choice made for author");
   }
 });
+
+

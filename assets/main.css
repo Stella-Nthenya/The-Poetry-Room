@@ -93,10 +93,23 @@ h3 {
     font-weight: 200;
 }
 
+#like-dislike {
+    display: flex;
+    flex-direction: row;
+}
+
+#like-dislike p {
+    margin: .5rem .75rem;
+    padding: .5rem;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
 #poems_content {
     display: block;
-    /* width: 100%; */
-    /* margin: 0 auto; */
+    margin-top: 2px;
     padding: 1.5rem;
     background-color: #f2f2f2;
 }
