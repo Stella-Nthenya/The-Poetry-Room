@@ -15,7 +15,22 @@ const liked_poems = [];
 async function get_resource(path = "", params = {}) {
   const url = new URL(poems_api + path);
   const response = await fetch(url);
-  return response.json();
+  if (params) {
+    Object.keys(params).forEach(function (key) {
+      return url.searchParams.append(key, params[key]);
+    });
+  }
+  try {
+    if (response.ok) {
+      return response.json();
+    } else {
+      throw new Error(
+        `Server error occurred: ${response.status} ${response.statusText}`
+      );
+    }
+  } catch (error) {
+    throw new Error(`Error occurred: ${error.toString()}`);
+  }
 }
 
 // Fetch the whole poems list data
@@ -109,22 +124,24 @@ filter_poems_form.addEventListener("submit", function (event) {
 
         poems_div.appendChild(poemDiv);
 
-        like_btn.addEventListener("click", function() {
-          liked_poems.push(`${title} by ${author}`)
-          
-          if (liked_poems){
-            liked_poems.forEach(function(element) {
+        like_btn.addEventListener("click", function () {
+          liked_poems.push(`${title} by ${author}`);
+
+          // if(!liked_poems.find(`${title} by ${author}`)){
+          //   liked_poems.push(`${title} by ${author}`)
+          // }
+
+          if (liked_poems) {
+            liked_poems.forEach(function (element) {
               const p = document.createElement("p");
               p.innerHTML = element;
-              liked_poems_div.append(p)
-            })
+              liked_poems_div.append(p);
+            });
           }
-        })
+        });
       });
     });
   } else {
     alert("No choice made for author");
   }
 });
-
-
