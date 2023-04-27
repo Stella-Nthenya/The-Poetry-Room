@@ -14,6 +14,9 @@ This is a project that retrieves poems from different poets. The project has bee
 - Easy navigation
 - Responsive design
 
+## Live Link
+To view the live version of the project, [click here](https://stella-nthenya.github.io/the-poetry-room/)
+
 ## Getting Started
 
 ### Prerequisites
